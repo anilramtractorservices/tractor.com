@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anil Ram Tractor Services</title>
+    <link rel="icon" href="head.jpg" type="image/jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        header {
+            background-image: url('header.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        header h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            position: relative;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        }
+        
+        header p {
+            color: white;
+            font-size: 1.2rem;
+            position: relative;
+            max-width: 800px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        }
+        
+        nav {
+            background-color: #2c3e50;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+            padding: 5px 10px;
+            display: inline-block;
+        }
+        
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+        
+        nav ul li:first-child a {
+            font-weight: bold;
+            background-color: #F65058FF;
+            border-radius: 4px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+         
+        .tractor-image {
+            flex: 1;
+            padding: 20px;
+        }
+        
+        .tractor-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-content {
+            flex: 1;
+            padding: 20px;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .services-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 60px;
+        }
+        
+        .services-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        
+        .service-item {
+            flex-basis: 48%;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        
+        .service-item h3 {
+            color: #e74c3c;
+            margin-bottom: 5px;
+        }
+        
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: 40px auto;
+            overflow: hidden;
+        }
+        
+        .mySlides {
+            display: none;
+            text-align: center;
+        }
+        
+        .mySlides img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .slide-caption {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+        
+        .contact-info {
+            margin-bottom: 20px;
+        }
+        
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        .contact-info a button {
+            padding: 10px 20px;
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .contact-info a {
+            color: white;
+        }
+        
+        /* Language Selection Modal */
+        .modal {
+            display: block; /* Changed from none to block to always show */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 30px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .modal h2 {
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        
+        .language-option {
+            display: inline-block;
+            margin: 0 15px;
+            cursor: pointer;
+            padding: 15px 30px;
+            background-color: #f39c12;
+            color: white;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+        
+        .language-option:hover {
+            background-color: #e67e22;
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                height: 200px;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            header p {
+                font-size: 1rem;
+            }
+            
+            .about-section {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+            }
+            
+            nav ul li {
+                margin: 8px;
+            }
+            
+            .service-item {
+                flex-basis: 100%;
+            }
+            
+            .language-option {
+                display: block;
+                margin: 15px auto;
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Selection Modal - Always visible initially -->
+    <div id="languageModal" class="modal">
+        <div class="modal-content">
+            <h2>Please select your language / कृपया अपनी भाषा चुनें</h2>
+            <div class="language-option" onclick="selectLanguage('en')">English</div>
+            <div class="language-option" onclick="selectLanguage('hi')">हिंदी (Hindi)</div>
+        </div>
+    </div>
+    
+    <!-- Main Website Content (hidden initially) -->
+    <div id="mainContent" style="display:none;">
+        <header id="headerContent">
+            <h1>Anil Ram Tractor Services</h1>
+        </header>
+        
+        <nav id="navContent">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="container" id="home">
+            <section class="about-section" id="about">
+                <div class="tractor-image">
+                    <img src="tractor.jpg" loading="lazy">
+                </div>
+            </section>
+            
+            <section id="services">
+                <h2 id="servicesTitle">Our Services</h2>
+                <div class="services-container">
+                    <p id="servicesDesc">We provide comprehensive tractor services including:</p>
+                    <div class="services-list">
+                        <div class="service-item">
+                            <h3 id="service1Title">Farm Ploughing (Rotavator)</h3>
+                            <p id="service1Desc">Professional land preparation services.</p>
+                        </div>
+                        <div class="service-item">
+                            <h3 id="service2Title">Transportation of Goods</h3>
+                            <p id="service2Desc">Reliable transportation services for agricultural and construction materials.</p>
+                        </div>
+                        <div class="service-item">
+                            <h3 id="service3Title">Animal Food Cutter</h3>
+                            <p id="service3Desc">Animal feed cutter for cutting and preparing animal feed.</p>
+                        </div>
+                        <div class="service-item">
+                            <h3 id="service4Title">Cement Mixer</h3>
+                            <p id="service4Desc">Concrete mixer for construction projects.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="gallery">
+                <h2 id="galleryTitle">Our Work Gallery</h2>
+                <div class="slideshow-container">
+                    <div class="mySlides">
+                        <img src="tractor.jpg">
+                        <div class="slide-caption">My Tractor</div>
+                    </div>
+                    <div class="mySlides">
+                        <img src="trailer.jpg">
+                        <div class="slide-caption">Trailer</div>
+                    </div>
+                    <div class="mySlides">
+                        <img src="plough.jpg">
+                        <div class="slide-caption">Plough</div>
+                    </div>
+                    <div class="mySlides">
+                        <img src="rotavator.jpg">
+                        <div class="slide-caption">Rotavator</div>
+                    </div>
+                    <div class="mySlides">
+                        <img src="cutter.jpg">
+                        <div class="slide-caption">Animal feed cutter</div>
+                    </div>
+                    <div class="mySlides">
+                        <img src="mixer.jpg">
+                        <div class="slide-caption">Cement Mixer</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <footer id="contact">
+            <div class="contact-info">
+                <h3 id="contactTitle">Contact Anil Ram Tractor Services</h3>
+                <p>
+                <span id="mapText">Google map:</span>   <a href="https://maps.app.goo.gl/HwhNen9qPZhSEsCJ9" target="_blank">
+                        <button id="locationBtn">Our Location</button>
+                    </a>
+                </p>
+                <p>
+                    <span id="emailText">Email:</span> <a href="mailto:amanraj05100@gmail.com"> amanraj05100@gmail.com</a>
+                </p>
+                <p id="addressText">Address: Silhauri, Siyani Road,<br>Sheikhpura, Bihar</p>
+            </div>
+            <p id="creatorText">Created with ❤️ by Aman Raj</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Language selection function
+        function selectLanguage(lang) {
+            setLanguage(lang);
+            document.getElementById('languageModal').style.display = 'none';
+            document.getElementById('mainContent').style.display = 'block';
+        }
+        
+        // Set language content
+        function setLanguage(lang) {
+            const content = {
+                'en': {
+                    'headerTitle': 'Anil Ram Tractor Services',
+                    'navHome': 'Home',
+                    'navServices': 'Services',
+                    'navGallery': 'Gallery',
+                    'navContact': 'Contact',
+                    'servicesTitle': 'Our Services',
+                    'servicesDesc': 'We provide comprehensive tractor services including:',
+                    'service1Title': 'Farm Ploughing (Rotavator)',
+                    'service1Desc': 'Professional land preparation services.',
+                    'service2Title': 'Transportation of Goods',
+                    'service2Desc': 'Reliable transportation services for agricultural and construction materials.',
+                    'service3Title': 'Animal Food Cutter',
+                    'service3Desc': 'Animal feed cutter for cutting and preparing animal feed.',
+                    'service4Title': 'Cement Mixer',
+                    'service4Desc': 'Concrete mixer for construction projects.',
+                    'galleryTitle': 'Our Work Gallery',
+                    'contactTitle': 'Contact Anil Ram Tractor Services',
+                    'mapText': 'Google map:',
+                    'locationBtn': 'Our Location',
+                    'emailText': 'Email:',
+                    'addressText': 'Address: Silhauri, Siyani Road,<br>Sheikhpura, Bihar',
+                    'creatorText': 'Created with ❤️ by Aman Raj'
+                },
+                'hi': {
+                    'headerTitle': 'अनिल राम ट्रैक्टर सेवाएं',
+                    'navHome': 'होम',
+                    'navServices': 'सेवाएं',
+                    'navGallery': 'गैलरी',
+                    'navContact': 'संपर्क',
+                    'servicesTitle': 'हमारी सेवाएं',
+                    'servicesDesc': 'हम व्यापक ट्रैक्टर सेवाएं प्रदान करते हैं जिनमें शामिल हैं:',
+                    'service1Title': 'खेत जोताई (रोटावेटर)',
+                    'service1Desc': 'खेत जोताई सेवाएं।',
+                    'service2Title': 'माल की ढुलाई',
+                    'service2Desc': 'कृषि और निर्माण सामग्री के लिए विश्वसनीय परिवहन सेवाएं।',
+                    'service3Title': 'पशु आहार कटर',
+                    'service3Desc': 'पशु आहार काटने के लिए मशीन।',
+                    'service4Title': 'सीमेंट मिक्सर',
+                    'service4Desc': 'निर्माण परियोजनाओं के लिए कंक्रीट मिक्सर।',
+                    'galleryTitle': 'हमारे काम की गैलरी',
+                    'contactTitle': 'अनिल राम ट्रैक्टर सेवाएं से संपर्क करें',
+                    'mapText': 'गूगल मानचित्र:',
+                    'locationBtn': 'हमारा स्थान',
+                    'emailText': 'ईमेल:',
+                    'addressText': 'पता: सिल्हौड़ी, सियानी रोड,<br>शेखपुरा, बिहार',
+                    'creatorText': 'अमन राज द्वारा ❤️ के साथ बनाया गया'
+                }
+            };
+            
+            // Update all text elements
+            document.querySelector('header h1').textContent = content[lang].headerTitle;
+            
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks[0].textContent = content[lang].navHome;
+            navLinks[1].textContent = content[lang].navServices;
+            navLinks[2].textContent = content[lang].navGallery;
+            navLinks[3].textContent = content[lang].navContact;
+            
+            document.getElementById('servicesTitle').textContent = content[lang].servicesTitle;
+            document.getElementById('servicesDesc').textContent = content[lang].servicesDesc;
+            
+            document.getElementById('service1Title').textContent = content[lang].service1Title;
+            document.getElementById('service1Desc').textContent = content[lang].service1Desc;
+            document.getElementById('service2Title').textContent = content[lang].service2Title;
+            document.getElementById('service2Desc').textContent = content[lang].service2Desc;
+            document.getElementById('service3Title').textContent = content[lang].service3Title;
+            document.getElementById('service3Desc').textContent = content[lang].service3Desc;
+            document.getElementById('service4Title').textContent = content[lang].service4Title;
+            document.getElementById('service4Desc').textContent = content[lang].service4Desc;
+            
+            document.getElementById('galleryTitle').textContent = content[lang].galleryTitle;
+            document.getElementById('contactTitle').textContent = content[lang].contactTitle;
+            document.getElementById('mapText').textContent = content[lang].mapText;
+            document.getElementById('locationBtn').textContent = content[lang].locationBtn;
+            document.getElementById('emailText').textContent = content[lang].emailText;
+            document.getElementById('addressText').innerHTML = content[lang].addressText;
+            document.getElementById('creatorText').textContent = content[lang].creatorText;
+        }
+        
+        // Slideshow functionality
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 1750);
+        }
+    </script>
+</body>
+</html>
