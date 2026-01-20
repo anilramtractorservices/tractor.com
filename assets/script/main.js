@@ -124,7 +124,7 @@
   function setConsentLanguage(lang) {
     document.querySelector("#consentModal h3").textContent = consentText[lang].title;
     document.querySelector("#consentModal p").innerHTML =
-      consentText[lang].desc + ' <a href="pp.html" target="_blank">Privacy Policy</a>';
+      consentText[lang].desc + ' <a href="privacy policy.html" target="_blank">Privacy Policy</a>';
     
     // Checkbox label
     document.getElementById("consentCheck").nextSibling.textContent = " " + consentText[lang].agree;
