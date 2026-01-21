@@ -1,6 +1,3 @@
-// ----------------------
-// Language content
-// ----------------------
 function setLanguage(lang) {
   const content = {
     en: {
