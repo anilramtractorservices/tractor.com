@@ -1,4 +1,4 @@
-    const content = {
+   const content = {
       en: `
         <h2>Introduction</h2>
         <p>
