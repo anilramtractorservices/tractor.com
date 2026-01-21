@@ -46,7 +46,7 @@ function setLanguage(lang) {
       locationBtn: 'हमारा स्थान',
       emailText: 'ईमेल:',
       addressText: 'पता: सिल्हौड़ी, सियानी रोड,<br>शेखपुरा, बिहार, पिन कोड:- 811315',
-      creatorText: 'Made with ❤️ by AMAN RAJ'
+      creatorText: 'Created with ❤️ by AMAN RAJ'
     }
   };
 
