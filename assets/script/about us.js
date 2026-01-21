@@ -11,7 +11,7 @@ const content = {
     </p>
 
     <p>
-      Based in Sheikhpura, Bihar, our goal is to support farmers by offering
+      our goal is to support farmers by offering
       timely service, fair pricing, and honest work.
     </p>
 
@@ -32,8 +32,8 @@ const content = {
     </p>
 
     <p>
-      शेखपुरा, बिहार में स्थित अनिल ट्रैक्टर सर्विस
-      समय पर सेवा, उचित दाम और ईमानदारी के लिए जानी जाती है।
+      अनिल ट्रैक्टर सर्विस समय पर सेवा, 
+      उचित दाम और ईमानदारी के लिए जानी जाती है।
     </p>
 
     <p>
