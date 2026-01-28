@@ -18,8 +18,6 @@ function setLanguage(lang) {
       service4Desc: 'Concrete mixer for construction projects.',
       galleryTitle: 'Our Work Gallery',
       contactTitle: 'Contact Anil Tractor Services',
-      mapText: 'Google map:',
-      locationBtn: 'Our Location',
       emailText: 'Email:',
       addressText: 'Address: Silhauri, Siyani Road,<br>Sheikhpura, Bihar, Pin code:- 811315',
       creatorText: 'Created with ❤️ by AMAN RAJ'
@@ -42,8 +40,6 @@ function setLanguage(lang) {
       service4Desc: 'निर्माण परियोजनाओं के लिए कंक्रीट मिक्सर।',
       galleryTitle: 'हमारे काम की गैलरी',
       contactTitle: 'अनिल ट्रैक्टर सेवाएं से संपर्क करें',
-      mapText: 'गूगल मानचित्र:',
-      locationBtn: 'हमारा स्थान',
       emailText: 'ईमेल:',
       addressText: 'पता: सिल्हौड़ी, सियानी रोड,<br>शेखपुरा, बिहार, पिन कोड:- 811315',
       creatorText: 'Created with ❤️ by AMAN RAJ'
