@@ -2,165 +2,643 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Anil Tractor Service – Professional Tractor & Farm Equipment Services</title>
-  
-  <meta name="description" content="Anil Tractor Service provides reliable tractor services like farm ploughing, goods transportation, animal feed cutter, cement mixer and agricultural support in Sheikhpura, Bihar. Best farming services in Sheikhpura Bihar, tractor on rent near Chewara, agricultural production Sikandra Jamui, services Lakhisarai">
-  
-  <meta name="keywords" content="tractor services, farm ploughing, tractor transportation, tractor service Sheikhpura, agricultural services Bihar, animal feed cutter service, cement mixer service, Anil Tractor Service, farming services near Sheikhpura District, farming in Sheikhpura Bihar, tractor services near Sheikhpura, farming near Chewara Bihar, farming services near Sikandra Jamui, agriculture Lakhisarai Sheikhpura, farming Sheikhpura Bihar">
-  
-  <meta name="robots" content="index, follow">
-  
-  <meta name="author" content="Anil Tractor Service">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Open Graph / Facebook / WhatsApp -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Farming & Tractor Services Near Sheikhpura, Chewara, Lakhisarai, Jamui, Sikandra, Aliganj, Patna, Bihar | Bihar Agriculture">
-  <meta property="og:description" content="Professional tractor and farm equipment services including ploughing, transport, feed cutter and cement mixer services in Sheikhpura, Bihar.">
-  <meta property="og:url" content="https://aniltractorservice.online/">
-  <meta property="og:image" content="https://aniltractorservice.online/assets/images/banner.png">
-  <meta property="og:site_name" content="Anil Tractor Service">
-  
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Anil Tractor Service – Reliable Tractor Services">
-  <meta name="twitter:description" content="Top quality tractor services in Sheikhpura Bihar including ploughing, goods transport, animal feed cutter and cement mixer services.">
-  <meta name="twitter:image" content="https://aniltractorservice.online/assets/images/banner.png">
-  
-  <link rel="canonical" href="https://aniltractorservice.online/">
-  <link rel="icon" href="assets/images/logo.png" type="image/png">
-  <link rel="stylesheet" href="assets/style/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anil Tractor Service | Home</title>
 
-  <script src="https://3nbf4.com/act/files/tag.min.js?z=10531562" data-cfasync="false" async></script>
-  <script>(function(s){s.dataset.zone='10531568',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-  <script src="https://quge5.com/88/tag.min.js" data-zone="206256" async data-cfasync="false"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --green: #2f6b3d;
+            --green-dark: #214f2d;
+            --yellow: #d8b64c;
+            --light: #f8f8f8;
+            --dark: #222;
+            --gray: #666;
+            --white: #fff;
+            --radius: 14px;
+            --shadow: 0 10px 30px rgba(0, 0, 0, .12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+            background-color: var(--white);
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background: var(--green);
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: .3s;
+            text-align: center;
+        }
+
+        .btn:hover,
+        .btn:active {
+            background: var(--green-dark);
+            transform: translateY(-2px);
+        }
+
+        /* HEADER */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #fff;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--green-dark);
+            padding: 5px 0;
+        }
+
+        .menu-toggle {
+            font-size: 1.6rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--green-dark);
+            padding: 10px;
+            margin-right: -10px;
+        }
+
+        .navbar {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: #fff;
+            box-shadow: var(--shadow);
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar.show {
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 0;
+        }
+
+        .nav-links a {
+            padding: 16px 5%;
+            color: var(--dark);
+            font-weight: 600;
+            display: block;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+        }
+
+        .nav-links a.active,
+        .nav-links a:hover {
+            color: var(--green);
+            background: var(--light);
+        }
+
+        /* HERO - FIXED FOR MOBILE PHONES */
+        .hero {
+            position: relative;
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            padding: 140px 20px 80px 20px;
+            /* Mobile Phone background handling */
+            background-image: url('tractor.png');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .hero-content h1 {
+            font-size: 1.8rem;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero-content p {
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* SECTION UNIVERSALS */
+        .about-preview,
+        .services-preview {
+            padding: 60px 0;
+        }
+
+        /* ABOUT */
+        .about-grid {
+            display: grid;
+            gap: 30px;
+        }
+
+        .about-image img {
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .about-content h2 {
+            margin-bottom: 15px;
+            color: var(--green-dark);
+            font-size: 1.8rem;
+        }
+
+        .about-content p {
+            color: var(--gray);
+            margin-bottom: 25px;
+            font-size: 1rem;
+        }
+
+        /* SERVICES */
+        .services-preview {
+            background: var(--light);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: var(--green-dark);
+        }
+
+        .section-title p {
+            color: var(--gray);
+        }
+
+        .service-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform .3s;
+        }
+
+        .service-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-card h3 {
+            padding: 20px 20px 10px;
+            color: var(--green-dark);
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            padding: 0 20px 20px;
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .services-btn {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .footer h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            color: var(--yellow);
+        }
+
+        .footer p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            margin: 30px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            color: #fff;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .copyright {
+            margin-top: 25px;
+            padding-top: 20px;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, .1);
+        }
+
+        /* ANIMATIONS */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: .6s ease-out;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .fade-up {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
+
+        /* TABLET & IPAD BREAKPOINT */
+        @media(min-width:768px) {
+
+            .about-preview,
+            .services-preview {
+                padding: 100px 0;
+            }
+
+            .logo {
+                font-size: 1.4rem;
+            }
+
+            .menu-toggle {
+                display: none;
+            }
+
+            .navbar {
+                display: block;
+                position: static;
+                width: auto;
+                background: none;
+                box-shadow: none;
+                border-top: none;
+            }
+
+            .nav-links {
+                flex-direction: row;
+                gap: 20px;
+                padding: 0;
+            }
+
+            .nav-links a {
+                padding: 10px 15px;
+                border-bottom: none;
+            }
+
+            .nav-links a:hover {
+                background: none;
+            }
+
+            .hero {
+                min-height: 100vh;
+                padding: 0;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+                gap: 40px;
+            }
+
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .footer-links {
+                flex-direction: row;
+                justify-content: center;
+                gap: 40px;
+            }
+        }
+
+        /* DESKTOP BREAKPOINT */
+        @media(min-width:1024px) {
+            .hero-content h1 {
+                font-size: 4rem;
+            }
+
+            .service-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .service-card:hover {
+                transform: translateY(-8px);
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <!-- Privacy Consent Modal -->
-  <div id="consentModal">
-    <div class="consent-box">
-      <h3>Privacy Policy Consent</h3>
-      <p>
-        By continuing, you agree to our
-        <a href="privacy policy.html" target="_blank">Privacy Policy</a>.
-        This helps us serve ads and improve user experience.
-      </p>
-      
-      <label>
-        <input type="checkbox" id="consentCheck">
-        I agree
-      </label>
-      
-      <button id="acceptConsentBtn">Accept</button>
-    </div>
-  </div>
-  <!-- Main Website Content (hidden initially) -->
-  <div id="mainContent" style="display:none;">
-    
-    <header id="home">
-      <img src="assets/images/header.png" alt="Anil Tractor Header" class="header-img">
-      
-      <h1>Anil Tractor Services</h1>
-    </header>
-    
-    <nav id="navContent">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="container" id="home">
-      <section class="about-section" id="about">
-        <div class="tractor-image">
-          <img src="assets/images/tractor.png" loading="lazy" alt="Anil Tractor">
-        </div>
-      </section>
-      
-      <section id="services">
-        <h2 id="servicesTitle">Our Services</h2>
-        <div class="services-container">
-          <p id="servicesDesc">We provide comprehensive tractor services including:</p>
-          <div class="services-list">
-            <div class="service-item">
-              <h3 id="service1Title">Farm Ploughing (Rotavator)</h3>
-              <p id="service1Desc">Ploughing fields.</p>
-            </div>
-            <div class="service-item">
-              <h3 id="service2Title">Transportation of Goods</h3>
-              <p id="service2Desc">Reliable transportation services for agricultural and construction materials.</p>
-            </div>
-            <div class="service-item">
-              <h3 id="service3Title">Animal Food Cutter</h3>
-              <p id="service3Desc">Animal feed cutter for cutting and preparing animal feed.</p>
-            </div>
-            <div class="service-item">
-              <h3 id="service4Title">Cement Mixer</h3>
-              <p id="service4Desc">Concrete mixer for construction projects.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <section id="gallery">
-        <h2 id="galleryTitle">Our Work Gallery</h2>
-        <div class="slideshow-container">
-          <div class="mySlides">
-            <img src="assets/images/tractor.png" alt="Anil Tractor">
-            <div class="slide-caption">My Tractor</div>
-          </div>
-          <div class="mySlides">
-            <img src="assets/images/trailer.png" alt="Anil Tractor">
-            <div class="slide-caption">Trailer</div>
-          </div>
-          <div class="mySlides">
-            <img src="assets/images/plough.png" alt="Anil Tractor">
-            <div class="slide-caption">Plough</div>
-          </div>
-          <div class="mySlides">
-            <img src="assets/images/rotavator.png" alt="Anil Tractor">
-            <div class="slide-caption">Rotavator</div>
-          </div>
-          <div class="mySlides">
-            <img src="assets/images/cutter.png" alt="Anil Tractor">
-            <div class="slide-caption">Animal feed cutter</div>
-          </div>
-          <div class="mySlides">
-            <img src="assets/images/mixer.png" alt="Anil Tractor">
-            <div class="slide-caption">Cement Mixer</div>
-          </div>
-        </div>
-      </section>
-    </div>
-    
-    <footer id="contact">
-      <div class="contact-info">
-        <h3 id="contactTitle">Contact Anil Tractor Services</h3>
-        <p>
-          <span id="mapText">Google map:</span> <a href="https://www.rawaniboy.site" target="_blank">
-            <button id="locationBtn">Our Location</button>
-          </a>
-        </p>
-        <p>
-          <span id="emailText">Email:</span> <a href="mailto:amanraj05100@gmail.com"> amanraj05100@gmail.com</a>
-        </p>
-        <p id="addressText">Address: Silhauri, Siyani Road,<br>Sheikhpura, Bihar, Pin code:- 811315</p>
-      </div>
-      <div class="privacy-box">
-                <a href="about us.html" class="privacy-link">About us</a>
 
-        <a href="privacy policy.html" class="privacy-link">Privacy Policy</a>
-      </div>
-      <p id="creatorText">Created with ❤️ by Aman Raj</p>
+    <!-- HEADER SECTION -->
+    <header class="header">
+        <div class="container nav-container">
+
+            <a href="/" class="logo">
+                Anil Tractor Service
+            </a>
+
+            <nav class="navbar" id="navbar">
+                <ul class="nav-links">
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <h1>
+                Trusted Tractor & Agricultural Services in Sheikhpura, Bihar
+            </h1>
+            <p>
+                Helping farmers and businesses with reliable and affordable solutions.
+            </p>
+            <a href="about.html" class="btn">
+                Learn More
+            </a>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-preview fade-up">
+        <div class="container about-grid">
+
+            <div class="about-image">
+                <img src="tractor.png" alt="About Anil Tractor Service">
+            </div>
+
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p>
+                    Anil Tractor Service is a trusted provider of tractor and agricultural services, helping farmers and
+                    businesses with reliable solutions. Our goal is to make farming and construction easier with
+                    dependable tractor services, modern equipment, and a commitment to quality work.
+                </p>
+                <a href="about.html" class="btn">
+                    Read More
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services-preview">
+        <div class="container">
+
+            <div class="section-title fade-up">
+                <h2>Our Key Services</h2>
+                <p>Professional agricultural and utility services.</p>
+            </div>
+
+            <div class="service-grid">
+
+                <div class="service-card fade-up">
+                    <img src="cultivator.png" alt="Cultivator">
+                    <h3>Cultivator</h3>
+                    <p>
+                        Efficient soil loosening and field preparation services for improved crop growth and
+                        cultivation.
+                    </p>
+                </div>
+
+                <div class="service-card fade-up">
+                    <img src="rotavator.png" alt="rotavator">
+                    <h3>Farm Ploughing (Rotavator)</h3>
+                    <p>Efficient soil preparation and cultivation services.</p>
+                </div>
+
+                <div class="service-card fade-up">
+                    <img src="trailer.png" alt="Transportation Trailer">
+                    <h3>Transportation of Goods</h3>
+                    <p>Reliable transportation for agricultural and commercial needs.</p>
+                </div>
+
+                <div class="service-card fade-up">
+                    <img src="cutter.png" alt="Animal Food Cutter">
+                    <h3>Animal Food Cutter</h3>
+                    <p>Efficient fodder cutting services for livestock feeding.</p>
+                </div>
+
+                <div class="service-card fade-up">
+                    <img src="mixer.png" alt="Cement Mixer">
+                    <h3>Cement Mixer</h3>
+                    <p>Construction support with dependable mixing equipment.</p>
+                </div>
+
+            </div>
+
+            <div class="services-btn">
+                <a href="services.html" class="btn">
+                    Explore All Services
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+        <div class="container">
+
+            <h3>Anil Tractor Service</h3>
+            <p>
+                Silhauri, Siyani Road, Sheikhpura, Bihar, Pin code:- 811315
+            </p>
+
+            <div class="footer-links">
+                <a href="mailto:amanraj05100@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                    comingsoon@email.com
+                </a>
+                <a href="https://maps.google.com/?q=Siyani+Road,Sheikhpura,Bihar,811315" target="_blank"
+                    rel="noopener">
+                    <i class="fas fa-location-dot"></i>
+                    Find Us
+                </a>
+            </div>
+
+            <p class="copyright">
+                &copy; <span id="year"></span> Anil Tractor Service. All Rights Reserved.
+            </p>
+
+        </div>
     </footer>
-  </div>
-  <script src="assets/script/main.js"></script>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navbar = document.getElementById('navbar');
+
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('show');
+            const icon = menuToggle.querySelector('i');
+
+            if (navbar.classList.contains('show')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close Menu On Link Click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) {
+                    navbar.classList.remove('show');
+                    const icon = menuToggle.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+
+        // Header Dynamic Shadow on Scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 30) {
+                header.style.boxShadow = '0 8px 25px rgba(0,0,0,.12)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,.08)';
+            }
+        });
+
+        // Dynamic Copyright Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Scroll Reveal Animations
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        });
+
+        document.querySelectorAll('.fade-up').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
 </body>
 
 </html>
