@@ -63,7 +63,7 @@ form.addEventListener("submit", function(event) {
         submitBtn.disabled = false;
         submitBtn.textContent = "Send Message";
         if (response.ok) {
-            status.innerHTML = "Thanks! Your message has been sent successfully.";
+            status.innerHTML = "Thanks for contacting! We will reply soon.";
             status.className = "form-status success";
             form.reset(); // सबमिशन के बाद फॉर्म को रीसेट करने के लिए
         } else {
