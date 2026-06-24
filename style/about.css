@@ -1,0 +1,118 @@
+/* ==========================================================================
+   ABOUT PAGE SPECIFIC STYLES (about.css)
+   ========================================================================== */
+
+/* INNER HERO SECTION */
+.inner-hero {
+    position: relative;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 140px 20px 60px 20px;
+    background-image: url('/images/tractor.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.inner-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.inner-hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    width: 100%;
+    max-width: 800px;
+}
+
+.inner-hero-content h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.inner-hero-content p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* ABOUT DETAIL CONTENT */
+.about-page-section {
+    padding: 60px 0;
+}
+
+.about-main-grid {
+    display: grid;
+    gap: 40px;
+}
+
+.about-text-block h2 {
+    font-size: 1.8rem;
+    color: var(--green-dark);
+    margin-bottom: 15px;
+}
+
+.about-text-block p {
+    color: var(--gray);
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.vision-mission-cards {
+    display: grid;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.info-card {
+    background: var(--light);
+    padding: 25px;
+    border-radius: var(--radius);
+    border-left: 5px solid var(--green);
+}
+
+.info-card h3 {
+    color: var(--green-dark);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.info-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+.about-side-image img {
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* TABLET & DESKTOP BREAKPOINTS */
+@media(min-width: 768px) {
+    .inner-hero {
+        min-height: 50vh;
+    }
+
+    .inner-hero-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .about-main-grid {
+        grid-template-columns: 1.2fr 1fr;
+        align-items: start;
+        gap: 50px;
+    }
+
+    .vision-mission-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
